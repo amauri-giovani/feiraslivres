@@ -1,0 +1,46 @@
+curl -X GET http://127.0.0.1:8000/feiraslivres/
+
+curl -X POST http://127.0.0.1:8000/feiraslivres/ \
+    -H "Content-Type: application/json" \
+    -d '{
+          "nome_feira": "FEIRA",
+          "registro": "3333-3",
+          "bairro": "BAIRRO",
+          "logradouro": "LOGRADOURO",
+          "numero": "S/N",
+          "referencia": "REFERENCIA",
+          "lat": -23550464,
+          "long": -46659253,
+          "setcens": 355030826000014,
+          "areap": 3550308005013,
+          "coddist": 26,
+          "distrito": "DISTRITO",
+          "codsubpref": 9,
+          "subprefe": "SE",
+          "regiao5": "Centro",
+          "regiao8": "Centro"
+        }'
+
+
+curl -X PUT http://127.0.0.1:8000/feiralivre/9999-9/ \
+    -H "Content-Type: application/json" \
+    -d '{
+          "nome_feira": "NOVA FEIRA",
+          "bairro": "NOVO BAIRRO",
+          "logradouro": "NOVO LOGRADOURO",
+          "numero": "S/N",
+          "referencia": "NOVA REFERENCIA",
+          "lat": 0,
+          "long": 0,
+          "setcens": 0,
+          "areap": 0,
+          "coddist": 0,
+          "distrito": "NOVO DISTRITO",
+          "codsubpref": 0,
+          "subprefe": "NOVA SUBPREFE",
+          "regiao5": "SUL",
+          "regiao8": "SUL"
+        }'
+
+
+curl -X DELETE http://127.0.0.1:8000/feiralivre/9999-9/
